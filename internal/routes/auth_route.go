@@ -1,7 +1,7 @@
 package routes
 
 import (
-	authHandler "gh22-go/internal/handler"
+	authHandler "gh22-go/internal/handler/auth"
 	tokenRepo "gh22-go/internal/repository/token"
 	userRepo "gh22-go/internal/repository/user"
 	authService "gh22-go/internal/service/auth"

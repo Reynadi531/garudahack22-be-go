@@ -1,4 +1,4 @@
-package handler
+package auth
 
 import (
 	"gh22-go/internal/entities/web"

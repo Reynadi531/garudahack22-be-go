@@ -39,6 +39,7 @@ func main() {
 	middleware.RegisterMiddleware(app)
 
 	routes.RegisterAuthRoutes(app, database.DB)
+	routes.RegisterUserRoutes(app, database.DB)
 
 	if *DevMode {
 		utils.StartServer(app)
