@@ -2,11 +2,6 @@ package food
 
 import "github.com/lithammer/fuzzysearch/fuzzy"
 
-type FoodRepository interface {
-	GetAll() []string
-	FindMatches(string) []string
-}
-
 type foodRepository struct {
 	foods []string
 }
