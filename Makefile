@@ -15,7 +15,7 @@ docker.build:
 	docker build -f docker/Dockerfile -t backend-template-go:latest .
 
 docker.build.alpine:
-	docker build -f docker/alpine.Dockerfile -t backend-template-go:latest .
+	docker build -f docker/alpine.Dockerfile -t ghcr.io/reynadi531/gh22-go:latest .
 
 docker.dev:
 	docker-compose -f docker/docker-compose.dev.yaml up
