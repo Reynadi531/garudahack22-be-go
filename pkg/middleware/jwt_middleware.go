@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"backend-template-go/pkg/utils"
+	"gh22-go/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 
 	jwtMiddleware "github.com/gofiber/jwt/v3"

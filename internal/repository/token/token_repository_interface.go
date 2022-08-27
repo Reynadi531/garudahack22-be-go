@@ -1,7 +1,7 @@
 package token
 
 import (
-	"backend-template-go/internal/entities/model"
+	"gh22-go/internal/entities/model"
 	"github.com/google/uuid"
 )
 

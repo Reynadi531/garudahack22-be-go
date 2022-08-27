@@ -1,13 +1,13 @@
 package main
 
 import (
-	"backend-template-go/config"
-	"backend-template-go/internal/routes"
-	"backend-template-go/internal/validations"
-	"backend-template-go/pkg/database"
-	"backend-template-go/pkg/middleware"
-	"backend-template-go/pkg/utils"
 	"flag"
+	"gh22-go/config"
+	"gh22-go/internal/routes"
+	"gh22-go/internal/validations"
+	"gh22-go/pkg/database"
+	"gh22-go/pkg/middleware"
+	"gh22-go/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"

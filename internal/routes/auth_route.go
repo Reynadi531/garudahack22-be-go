@@ -1,10 +1,10 @@
 package routes
 
 import (
-	authHandler "backend-template-go/internal/handler"
-	tokenRepo "backend-template-go/internal/repository/token"
-	userRepo "backend-template-go/internal/repository/user"
-	authService "backend-template-go/internal/service/auth"
+	authHandler "gh22-go/internal/handler"
+	tokenRepo "gh22-go/internal/repository/token"
+	userRepo "gh22-go/internal/repository/user"
+	authService "gh22-go/internal/service/auth"
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"
 )

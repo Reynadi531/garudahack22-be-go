@@ -1,6 +1,6 @@
 package user
 
-import "backend-template-go/internal/entities/model"
+import "gh22-go/internal/entities/model"
 
 type UserRepository interface {
 	Create(user *model.User) (*model.User, error)

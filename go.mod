@@ -1,4 +1,4 @@
-module backend-template-go
+module gh22-go
 
 go 1.19
 

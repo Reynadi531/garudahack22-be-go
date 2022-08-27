@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"backend-template-go/config"
-	"backend-template-go/internal/entities/model"
+	"gh22-go/config"
+	"gh22-go/internal/entities/model"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"

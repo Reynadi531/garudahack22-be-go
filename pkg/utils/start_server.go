@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"backend-template-go/config"
 	"fmt"
+	"gh22-go/config"
 	"github.com/gofiber/fiber/v2"
 	"github.com/rs/zerolog/log"
 	"os"

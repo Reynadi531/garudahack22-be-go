@@ -1,8 +1,8 @@
 package database
 
 import (
-	"backend-template-go/config"
 	"fmt"
+	"gh22-go/config"
 	"github.com/rs/zerolog/log"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

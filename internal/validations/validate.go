@@ -1,7 +1,7 @@
 package validations
 
 import (
-	"backend-template-go/internal/entities/web"
+	"gh22-go/internal/entities/web"
 	en "github.com/go-playground/locales/en"
 	ut "github.com/go-playground/universal-translator"
 	"github.com/go-playground/validator/v10"

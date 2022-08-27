@@ -11,4 +11,5 @@ type User struct {
 	Name     string    `gorm:"type:varchar(255);not_null"`
 	Email    string    `gorm:"type:varchar(255);not_null;unique"`
 	Password string    `gorm:"not_null"`
+	AppToken string    `gorm:"type:varchar(255);not_null;unique"`
 }

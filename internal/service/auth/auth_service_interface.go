@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"backend-template-go/internal/entities/web"
+	"gh22-go/internal/entities/web"
 )
 
 type AuthService interface {

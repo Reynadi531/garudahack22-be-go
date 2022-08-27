@@ -1,11 +1,11 @@
 package auth
 
 import (
-	"backend-template-go/internal/entities/model"
-	"backend-template-go/internal/entities/web"
-	tokenRepo "backend-template-go/internal/repository/token"
-	userRepo "backend-template-go/internal/repository/user"
-	"backend-template-go/pkg/utils"
+	"gh22-go/internal/entities/model"
+	"gh22-go/internal/entities/web"
+	tokenRepo "gh22-go/internal/repository/token"
+	userRepo "gh22-go/internal/repository/user"
+	"gh22-go/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"gorm.io/gorm"
@@ -38,6 +38,8 @@ func (a authService) Register(name string, email string, password string) web.Re
 
 	hashPassword, err := utils.GeneratePassword(password)
 
+	appToken := uuid.New().String()
+
 	if err != nil {
 		return web.Response{
 			StatusCode: fiber.StatusInternalServerError,
@@ -52,6 +54,7 @@ func (a authService) Register(name string, email string, password string) web.Re
 		Name:     name,
 		Email:    email,
 		Password: hashPassword,
+		AppToken: appToken,
 	})
 
 	if err != nil {
@@ -163,6 +166,7 @@ func (a authService) Login(email string, password string) web.Response {
 		Data: map[string]interface{}{
 			"user_id":       user.ID.String(),
 			"token":         jwttoken,
+			"app_token":     user.AppToken,
 			"refresh_token": rt,
 			"exp":           exp,
 		},

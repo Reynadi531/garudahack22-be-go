@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"backend-template-go/internal/entities/web"
-	authService "backend-template-go/internal/service/auth"
-	"backend-template-go/internal/validations"
+	"gh22-go/internal/entities/web"
+	authService "gh22-go/internal/service/auth"
+	"gh22-go/internal/validations"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -29,6 +29,15 @@ func (a authHandler) Register(c *fiber.Ctx) error {
 			Message:    "Invalid request body",
 			Data:       nil,
 			Error:      err,
+		})
+	}
+
+	if register.Password != register.ConfirmPassword {
+		return c.Status(fiber.StatusBadRequest).JSON(web.Response{
+			StatusCode: fiber.StatusBadRequest,
+			Message:    "Password and confirm password must be the same",
+			Data:       nil,
+			Error:      "Password and confirm password must be the same",
 		})
 	}
 

@@ -1,6 +1,6 @@
 version: "3"
 services:
-  backend-template-go:
+  gh22-go:
     build:
       context: ../
       dockerfile: docker/dev.Dockerfile
@@ -12,7 +12,7 @@ services:
       - ../:/app
     restart: unless-stopped
 
-  postgres-backend-template-go:
+  postgres-gh22-go:
     image: postgres:14-alpine
     ports:
       - "5432:5432"
@@ -20,6 +20,6 @@ services:
       - db.env
     restart: unless-stopped
     volumes:
-      - postgres-backend-template-go:/var/lib/postgresql/data
+      - postgres-gh22-go:/var/lib/postgresql/data
 volumes:
-  postgres-backend-template-go:
+  postgres-gh22-go:
