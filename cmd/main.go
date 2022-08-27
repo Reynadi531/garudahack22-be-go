@@ -36,10 +36,13 @@ func main() {
 
 	validations.InitValidations()
 
+	utils.LoadFoods()
+
 	middleware.RegisterMiddleware(app)
 
 	routes.RegisterAuthRoutes(app, database.DB)
 	routes.RegisterUserRoutes(app, database.DB)
+	routes.RegisterFoodRoutes(app, utils.Foods)
 
 	if *DevMode {
 		utils.StartServer(app)
